@@ -5,10 +5,8 @@
  * Return: 0 or 1
  *
  */
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n < 0)
 	{
 		return (-1 * n); }
