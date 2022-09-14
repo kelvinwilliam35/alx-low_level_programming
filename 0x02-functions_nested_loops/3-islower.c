@@ -3,7 +3,7 @@
  *_islower - Check for the lower case of Alphabet
  *
  * Return: alway returns 0
- *
+ *@c : character to check the case
  */
 int _islower(int c)
 {
