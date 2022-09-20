@@ -9,14 +9,17 @@
 void print_rev(char *s)
 {
 	int a = 0;
+	int b;
 
-	while (s[a] != '\0')
+	while (s[a])
 	{
-		a++;
-	
-	a--;
-	while (a >= 0)
+		b = a;
+		a++; }
+	a = b++;
+
+	while (a)
 	{
 		_putchar(s[a]);
 		a--; }
-	_putchar('\n'); }}
+	_putchar(s[a++]);
+	_putchar('\n'); }
