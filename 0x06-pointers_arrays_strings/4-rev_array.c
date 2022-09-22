@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * reverse_array - reverse an int array
+ * reverse_array - reverses the content of an array of integers
  * @a: pointer
  * @n: array length
  * Return: void
@@ -12,7 +12,6 @@ void reverse_array(int *a, int n)
 	int count;
 	int k;
 	int c;
-
 	count = n - 1;
 	k = count / 2;
 
