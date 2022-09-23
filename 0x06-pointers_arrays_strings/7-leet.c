@@ -17,7 +17,9 @@ char *leet(char *s)
 	for (count = 0; s[count] != '\0'; count++)
 	{
 		for (count2 = 0; count2 < 5; count2++)
-			{if (s[count] == leet_count[count2] || s[count] == leet_count2[count2])
-				{s[count] = num[count2];
+		{
+			if (s[count] == leet_count[count2] || s[count] == leet_count2[count2])
+			{
+				s[count] = num[count2];
 				break; }}}
 	return (s); }
