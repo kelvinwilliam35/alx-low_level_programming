@@ -8,9 +8,7 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int a;
-	int b;
-	int lenght = 0;
+	int a, b, lenght = 0;
 
 	for (a = 0; s[a] >= '\0'; a++)
 	{
@@ -21,11 +19,5 @@ unsigned int _strspn(char *s, char *accept)
 				lenght ++;
 				break; }}
 		if (accept[b] == '\0')
-		{
-			break; }}
-		return (lenght); }
-
-
-
-
-
+			{break; }}
+	return (lenght); }
