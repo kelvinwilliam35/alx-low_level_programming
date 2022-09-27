@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strspn - return the number of occurence of a string
+ * _strspn - return the number of occurence of a string
  * @s: string to check
  * @accept: character to match
  * Return: int
