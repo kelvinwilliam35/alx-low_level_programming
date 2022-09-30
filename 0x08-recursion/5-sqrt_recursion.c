@@ -6,7 +6,7 @@
  * @a: square root
  * Return: int
  */
-int square (int n, int a)
+int square(int n, int a)
 	{
 	if (a * a == n)
 		return (a);
