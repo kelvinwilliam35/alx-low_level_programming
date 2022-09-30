@@ -12,8 +12,7 @@ int square(int n, int a)
 		return (a);
 	else if (a * a < n)
 		return (square(n, a + 1));
-	else 
-		return (-1); }
+	return (-1); }
 
 /**
  * _sqrt_recursion - find natural square root
