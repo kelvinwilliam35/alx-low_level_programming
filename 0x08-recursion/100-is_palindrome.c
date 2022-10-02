@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - returns the last index of a string (counts the null char)
+ * _strlen_recursion - returns the last index of a string
  * @s: pointer the string
  * Return: int
  */
