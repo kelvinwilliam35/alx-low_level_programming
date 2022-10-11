@@ -39,16 +39,14 @@ char *str_concat(char *s1, char *s2)
 	if (m == NULL)
 	{
 		return (NULL); }
-	else
+	while (s1[i])
 	{
-		while (s1[i])
-		{
-			m[i] = s1[i];
-			i++; }
-		while (s2[j])
-		{
-			m[i] = s2[j];
-			i++;
-			j++; }
-		m[i] = '\0'; }
+		m[i] = s1[i];
+		i++; }
+	while (s2[j])
+	{
+		m[i] = s2[j];
+		i++;
+		j++; }
+	m[i] = '\0'; 
 	return (m); }
