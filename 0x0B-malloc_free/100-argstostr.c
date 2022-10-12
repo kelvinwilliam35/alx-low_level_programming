@@ -9,30 +9,36 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, n, r = 0, l = 0;
-	char *str;
+	char *aout;
+	int c, i, j, ia;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
 	{
 		return (NULL); }
-	for (i = 0; i < ac; i++)
+	for (c = i = 0; i < ac; i++)
 	{
-		for (n = 0; av[i][n]; n++)
+		if (av[i] == NULL)
 		{
-			l++; }
-	l += ac;
-
-	str = malloc(sizeof(char) * l + 1);
-	if (str == NULL)
+			return (NULL); }
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			c++; }
+		c++; }
+	aout = malloc((c + 1) * sizeof(char));
+	if (aout == NULL)
 	{
+		free(aout);
 		return (NULL); }
-	for (i = 0; i < ac; i++)
+	for (i = j = ia = 0; ia < c; j++, ia++)
 	{
-		for (n = 0; av[i][n]; n++)
+		if (av[i][j] == '\0')
 		{
-			str[r] = av[i][n];
-			r++; }}
-	if (str[r] == '\0')
-	{
-		str[r++] = '\n'; }}
-	return (str); }
+			aout[ia] = '\n';
+			i++;
+			ia++;
+			j = 0; }
+		if (ia < c - 1)
+		{
+			aout[ia] = av[i][j]; }}
+	aout[ia] = '\0';
+	return (aout); }
