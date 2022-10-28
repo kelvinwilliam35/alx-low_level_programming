@@ -20,4 +20,4 @@ void free_listint(listint_t *head)
 	{
 		temp = ptr;
 		ptr = ptr->next;
-		free(tmp); }}
+		free(temp); }}
